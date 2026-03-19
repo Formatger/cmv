@@ -12,7 +12,7 @@ export default function Footer() {
             <p>Vilasar de Dalt, Maresme</p>
             <p className="text-white/30">© {new Date().getFullYear()} CMV</p>
             <a
-              href="/admin/"
+              href={`${import.meta.env.VITE_API_URL?.replace('/api', '') ?? ''}/admin/`}
               className="text-white/25 hover:text-gold transition-colors text-xs mt-1"
             >
               Administrar
