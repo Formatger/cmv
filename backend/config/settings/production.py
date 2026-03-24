@@ -19,7 +19,9 @@ CORS_ALLOWED_ORIGINS = config(
     default='https://cmv.cat'
 ).split(',')
 
-INSTALLED_APPS += ['cloudinary_storage', 'cloudinary']
+idx = INSTALLED_APPS.index('django.contrib.staticfiles')
+INSTALLED_APPS.insert(idx, 'cloudinary_storage')
+INSTALLED_APPS.append('cloudinary')
 
 cloudinary.config(
     cloud_name=config('CLOUDINARY_CLOUD_NAME'),
