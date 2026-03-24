@@ -8,3 +8,5 @@ python-slugify==8.0.4
 whitenoise==6.7.0
 gunicorn==22.0.0
 django-admin-sortable2==2.3.1
+cloudinary==1.42.1
+django-cloudinary-storage==0.3.0
