@@ -10,6 +10,7 @@ urlpatterns = [
     path('api/members/', include('apps.members.urls')),
     path('api/pages/', include('apps.pages.urls')),
     path('api/socis/', include('apps.socis.urls')),
+    path('api/protocols/', include('apps.protocols.urls')),
 ]
 
 if settings.DEBUG:

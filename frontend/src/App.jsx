@@ -8,6 +8,7 @@ import EventDetail from './pages/EventDetail'
 import Members from './pages/Members'
 import Socis from './pages/Socis'
 import About from './pages/About'
+import Protocols from './pages/Protocols'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/membres" element={<Members />} />
           <Route path="/socis" element={<Socis />} />
           <Route path="/sobre-nosaltres" element={<About />} />
+          <Route path="/protocols" element={<Protocols />} />
         </Routes>
       </Layout>
     </BrowserRouter>

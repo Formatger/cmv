@@ -8,6 +8,7 @@ const links = [
   { to: '/socis', label: 'Socis' },
   { to: '/membres', label: 'Membres de la Junta' },
   { to: '/sobre-nosaltres', label: 'Sobre nosaltres' },
+  { to: '/protocols', label: 'Protocols i Manuals' },
 ]
 
 export default function Navbar() {
@@ -21,7 +22,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex gap-1">
+        <nav className="hidden md:flex gap-1 items-center">
           {links.map(({ to, label }) => (
             <NavLink
               key={to}
@@ -35,6 +36,14 @@ export default function Navbar() {
               {label}
             </NavLink>
           ))}
+          <a
+            href="https://cmv.server.tmisl.es/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2 px-4 py-2 rounded-lg text-sm font-bold bg-gold text-gray-900 hover:brightness-110 shadow-md ring-2 ring-gold/60 transition-all duration-200"
+          >
+            Reserves
+          </a>
         </nav>
 
         {/* Hamburger */}
@@ -70,6 +79,15 @@ export default function Navbar() {
               {label}
             </NavLink>
           ))}
+          <a
+            href="https://cmv.server.tmisl.es/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="block px-3 py-2.5 rounded-lg text-sm font-bold mt-2 bg-gold text-gray-900 text-center shadow-md ring-2 ring-gold/60 transition-all duration-200"
+          >
+            Reserves
+          </a>
         </nav>
       )}
     </header>

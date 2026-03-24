@@ -1,5 +1,4 @@
 from django.db import models
-from slugify import slugify
 from apps.core.models import TimeStampedModel
 
 
@@ -17,7 +16,7 @@ class Instrument(models.Model):
 
 class Member(TimeStampedModel):
     name = models.CharField('Nom', max_length=255)
-    slug = models.SlugField('Slug', max_length=255, unique=True, blank=True)
+    carrec = models.CharField('Càrrec', max_length=255, blank=True)
     bio = models.TextField('Biografia', blank=True)
     photo = models.ImageField('Foto', upload_to='members/', blank=True, null=True)
     instruments = models.ManyToManyField(Instrument, verbose_name='Instruments', blank=True)
@@ -33,7 +32,3 @@ class Member(TimeStampedModel):
     def __str__(self):
         return self.name
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
-        super().save(*args, **kwargs)

@@ -22,6 +22,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'rest_framework',
     'corsheaders',
+    'adminsortable2',
 ]
 
 LOCAL_APPS = [
@@ -31,6 +32,7 @@ LOCAL_APPS = [
     'apps.members',
     'apps.pages',
     'apps.socis',
+    'apps.protocols',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

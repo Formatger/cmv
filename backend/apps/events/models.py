@@ -15,11 +15,12 @@ class Event(TimeStampedModel):
     price = models.DecimalField('Preu (€)', max_digits=6, decimal_places=2, blank=True, null=True)
     url_tickets = models.URLField('URL entrades', blank=True)
     published = models.BooleanField('Publicat', default=False)
+    order = models.PositiveIntegerField('Ordre', default=0, db_index=True)
 
     class Meta:
         verbose_name = 'Esdeveniment'
         verbose_name_plural = 'Esdeveniments'
-        ordering = ['date']
+        ordering = ['order', 'date']
 
     def __str__(self):
         return self.title

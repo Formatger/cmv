@@ -12,11 +12,12 @@ class NewsArticle(TimeStampedModel):
     image = models.ImageField('Imatge', upload_to='news/', blank=True, null=True)
     published = models.BooleanField('Publicat', default=False)
     pub_date = models.DateTimeField('Data de publicació', blank=True, null=True)
+    order = models.PositiveIntegerField('Ordre', default=0, db_index=True)
 
     class Meta:
         verbose_name = 'Notícia'
         verbose_name_plural = 'Notícies'
-        ordering = ['-pub_date', '-created_at']
+        ordering = ['order', '-pub_date']
 
     def __str__(self):
         return self.title

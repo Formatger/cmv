@@ -17,7 +17,7 @@ export default function NewsDetail() {
     <article className="max-w-3xl mx-auto">
       <Link to="/noticies" className="text-sm text-gold hover:underline mb-6 inline-block">← Tornar a notícies</Link>
       {data?.image && (
-        <img src={data.image} alt={data.title} className="w-full max-h-96 object-cover rounded-xl mb-8" />
+        <img src={data.image} alt={data.title} className="w-full rounded-xl mb-8" />
       )}
       {date && <p className="text-sm text-gray-400 mb-2">{date}</p>}
       <h1 className="text-3xl font-bold text-primary mb-4">{data?.title}</h1>

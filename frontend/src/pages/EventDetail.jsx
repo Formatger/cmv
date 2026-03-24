@@ -21,7 +21,7 @@ export default function EventDetail() {
     <article className="max-w-3xl mx-auto">
       <Link to="/esdeveniments" className="text-sm text-gold hover:underline mb-6 inline-block">← Tornar a esdeveniments</Link>
       {data?.image && (
-        <img src={data.image} alt={data.title} className="w-full max-h-96 object-cover rounded-xl mb-8" />
+        <img src={data.image} alt={data.title} className="w-full rounded-xl mb-8" />
       )}
       <div className="flex items-center gap-2 mb-3">
         <Badge variant={data?.is_upcoming ? 'green' : 'gray'}>{data?.is_upcoming ? 'Proper' : 'Passat'}</Badge>
